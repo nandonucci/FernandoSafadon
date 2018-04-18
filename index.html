@@ -1,0 +1,79 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Safadometro</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <script src='js/script.js'></script>
+      <script src='js/script_safadao.js'></script>
+    </head>
+    <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+              <h2>FernandonSafadon</h2>
+              <div class="alert alert-info" role="alert">
+                Implemente a função <b>FernandonSafadon</b> que recebe uma data de nacimento (dia, mês e ano) e calcule a porcentagem de <span class="label label-info">anjo</span> e a porcentagem de <span class="label label-info">vagabundo</span> de uma pessoa que nasceu na data de entrada.
+                <br>
+                Os cálculos obedecem a seguinte fórmula:
+                <hr>
+                <h4>safadeza = somatorio(mês) + (ano/100)*(50-dia)</h4>
+                <br>
+                <h4>anjo = 100 - safadeza</h4>
+                <hr>
+                A sua função não retorna nada, apenas escreve na tela a % de safadeza e a % de anjo da pessoa nascida naquela data.
+              </div>
+            </div>
+            <div class="col-md-6 text-right ajuste img-responsive">
+              <img src="img/wesleysafadao.jpg" alt="">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <form class="form-horizontal" name='form'>
+              <div class="form-horizontal" name='form'>
+                <label for="dia" class="col-md-2 control-label">Dia</label>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" id="dia" min="1" max="31">
+                </div>
+                <div class="form-group">
+                  <label for="mes" class="col-md-2 control-label">Mês</label>
+                  <div class="col-sm-3">
+                      <input type="number" class="form-control" id="mes" min="1" max="12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="ano" class="col-md-2 control-label">Ano</label>
+                  <div class="col-sm-3">
+                      <input type="number" class="form-control" id="ano" min="1" max="99" onkeyup="limit(this);">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                      <button type="button" class="btn btn-primary" onclick="valida();" name="button">
+                        Calcular Safadeza
+                      </button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+        <div class="col-md-7">
+            <div id="resultado" class="alert alert-danger text-center" role="alert">
+
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.22.4/jqyery.min.js">
+      </script>
+      <script src="js/bootstrap.min.js">
+      </script>
+    </body>
+
+  </html>

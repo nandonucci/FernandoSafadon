@@ -1,0 +1,11 @@
+.container{
+  margin-top: 10px;
+}
+
+.ajuste {padding-top: 61px;}
+.ajuste img{
+  border: 1px solid #bce8f1;
+  width: 450px;
+}
+
+#resultado{display: none;}
